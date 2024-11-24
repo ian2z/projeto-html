@@ -1,2 +1,39 @@
 @charset "UTF-8";
 
+.instagram-media {
+    max-width: 300px;
+    margin: 0 auto; 
+    transform: scale(0.6); 
+    transform-origin: top left;           
+}
+
+.por-dentro {
+    background-color: #573A31;
+    padding: 10px;
+}
+
+.quadrado {
+    background-color: white;
+    width: 200px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.queremos-te-ouvir {
+    background-color: #E8835E;
+    padding: 10px;
+}
+
+.seu-nome {
+    background-color: white;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.seu-nome > p {
+    margin-left: 10px;
+    color: gray;
+}
