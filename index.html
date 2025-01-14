@@ -4,19 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/projeto-html/scr/style/header.css">
+    <link rel="stylesheet" href="/projeto-html/scr/style/style.css">
+    <link rel="stylesheet" href="/projeto-html/scr/style/home.css">
+    <link rel="stylesheet" href="/projeto-html/scr/style/menu.css">
 </head>
-<header>
-    <img src="" alt="">
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre o Ville</a>
-        <a href="#">Por dentro</a>
-        <a href="#">Queremos te ouvir</a>
-    </nav>
-</header>
 <body>
+    <header>
+        <img class="logo" src="/projeto-html/imagens/favicon.ico" alt="logo">
+        
+        <nav id="navbar">
+            <ul id="nav-list">
+                <li class="nav-item active" data-target="#home">
+                    <a>Início</a>
+                </li>
+                <li class="nav-item" data-target="#sobre">
+                    <a>Sobre nós</a>
+                </li>
+                <li class="nav-item" data-target="#menu">
+                    <a>Cardápio</a>
+                </li>
+                <li class="nav-item" data-target="#contato">
+                    <a>Contato</a>
+                </li>
+            </ul>
+    
+            <button id="bt-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item">
+                    <a>Início</a>
+                </li>
+                <li class="nav-item">
+                    <a>Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a>Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a>Contato</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <script src="/projeto-html/script/script.js"></script>
+    
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">
+                    O sabor que você
+                    <span>merece!</span>
+                </h1>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iusto nemo numquam debitis, facilis temporibus officia 
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        ver cardapio
+                    </a>
+                </div>
+
+                <div class="social-media">
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="/projeto-html/imagens/cscz.png" alt="imagem da home">
+            </div>
+
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+
+                    <h3 class="dish-title">
+                        Lorem Ipsum
+                    </h3>
+    
+                    <span class="dish-descption">
+                        Descriçãdo do prato usado na foto IAN
+                    </span>
+    
+                    <div class="dish-price">
+                        <h4>R$ 1000,00</h4>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+
+                    <h3 class="dish-title">
+                        Lorem Ipsum
+                    </h3>
+    
+                    <span class="dish-descption">
+                        Descriçãdo do prato usado na foto IAN
+                    </span>
+    
+                    <div class="dish-price">
+                        <h4>R$ 1000,00</h4>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+
+                    <h3 class="dish-title">
+                        Lorem Ipsum
+                    </h3>
+    
+                    <span class="dish-descption">
+                        Descriçãdo do prato usado na foto IAN
+                    </span>
+    
+                    <div class="dish-price">
+                        <h4>R$ 1000,00</h4>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+
+                    <h3 class="dish-title">
+                        Lorem Ipsum
+                    </h3>
+    
+                    <span class="dish-descption">
+                        Descriçãdo do prato usado na foto IAN
+                    </span>
+    
+                    <div class="dish-price">
+                        <h4>R$ 1000,00</h4>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    
     <div class="inicio">
         <p>Naturalmente vivo, assim é o Ville des Plantes</p>
         <p>Um open mall que é refúgio.
@@ -54,5 +202,9 @@
             <p>seu nome</p>
         </div>
     </div>
+
+
+
+    <script src="/projeto-html/script/script2.js"></script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/xilosa');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                
+*{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;   
+}
+
+body{
+    background-color: aliceblue;
+}
+
+section{
+    padding: 28px 8%;
+}
+
+.instagram-media {
+    max-width: 300px;
+    margin: 0 auto; 
+    transform: scale(0.6); 
+    transform-origin: top left;           
+}
+
+.por-dentro {
+    background-color: #573A31;
+    padding: 10px;
+}
+
+.quadrado {
+    background-color: white;
+    width: 200px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.queremos-te-ouvir {
+    background-color: #E8835E;
+    padding: 10px;
+}
+
+.seu-nome {
+    background-color: white;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.seu-nome > p {
+    margin-left: 10px;
+    color: gray;
+}
+
+.social-media{
+    display: flex;
+    gap: 18px;
+}
+
+.social-media a{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    width: 45px;
+    height: 40px;
+    background-color: white;
+    font-size: 1.25rem;
+    border-radius:  10px;
+    text-decoration: none;
+    color: #573A31;
+    box-shadow: 0px 0px 12px 0.25px rgb(198, 198, 198);
+    transition: box-shadow .3s ease;
+}
+
+.social-media a:hover{
+    box-shadow: 0px 0px 12px 2px rgb(198, 198, 198);
+}
+
+.section-title{
+    color: orange;
+    font-size: 1.56rem;
+}
+
+.section-subtitle{
+    font-size: 2.1rem;
+}
