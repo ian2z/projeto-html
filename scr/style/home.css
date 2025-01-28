@@ -1,19 +1,19 @@
 #home{
     display: flex;
-    min-height:  calc(100vh -24px);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/imagens/pure2.jpg);
+    background-size: cover;
+    
 }
 
-#cta{
-    width: 35%;
-    display:  flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-top: 5%;
-}
 
 #cta .title{
     color: orange;
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: Xilosa;
 }
 
@@ -24,12 +24,17 @@
 
 #cta .description{
     font-size: 1.2rem;
-
+    color: white;
 }
 
 #cta_buttons{
     display: flex;
     gap: 24px;
+    justify-content: center;
+}
+
+.btn-default a {
+    text-decoration: none;
 }
 
 #banner{

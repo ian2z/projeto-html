@@ -6,97 +6,94 @@
     <title>Restaurante</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/projeto-html/scr/style/header.css">
-    <link rel="stylesheet" href="/projeto-html/scr/style/style.css">
-    <link rel="stylesheet" href="/projeto-html/scr/style/home.css">
-    <link rel="stylesheet" href="/projeto-html/scr/style/menu.css">
+    <link rel="stylesheet" href="../scr/style/header.css">
+    <link rel="stylesheet" href="../scr/style/style.css">
+    <link rel="stylesheet" href="../scr/style/home.css">
+    <link rel="stylesheet" href="../scr/style/menu.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="/projeto-html/imagens/favicon.ico" alt="logo">
+        <header class="bg-image">
+            <a href="#" class="logo"><img src="/imagens/favicon.ico" alt="logo"></a>
         
-        <nav id="navbar">
-            <ul id="nav-list">
-                <li class="nav-item active" data-target="#home">
-                    <a>Início</a>
-                </li>
-                <li class="nav-item" data-target="#sobre">
-                    <a>Sobre nós</a>
-                </li>
-                <li class="nav-item" data-target="#menu">
-                    <a>Cardápio</a>
-                </li>
-                <li class="nav-item" data-target="#contato">
-                    <a>Contato</a>
-                </li>
-            </ul>
-    
-            <button id="bt-mobile">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
-    
-        <div id="mobile-menu">
-            <ul id="mobile-nav-list">
-                <li class="nav-item">
-                    <a>Início</a>
-                </li>
-                <li class="nav-item">
-                    <a>Sobre nós</a>
-                </li>
-                <li class="nav-item">
-                    <a>Cardápio</a>
-                </li>
-                <li class="nav-item">
-                    <a>Contato</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <script src="/projeto-html/script/script.js"></script>
-    
-    <main id="content">
-        <section id="home">
-            <div id="cta">
-                <h1 class="title">
-                    O sabor que você
-                    <span>merece!</span>
-                </h1>
-
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iusto nemo numquam debitis, facilis temporibus officia 
-                </p>
-
-                <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                        ver cardapio
-                    </a>
-                </div>
-
+            <nav id="navbar">
+                <ul id="nav-list">
+                    <li class="nav-item active" data-target="#home">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-item" data-target="#sobre">
+                        <a href="#">Mix Arretado</a>
+                    </li>
+                    <li class="nav-item" data-target="#menu">
+                        <a href="#">Cardápio</a>
+                    </li>
+                    <li class="nav-item" data-target="#contato">
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+                
+                <!--
                 <div class="social-media">
-                    <a href="#">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                -->
+                    
+                
+                <button id="bt-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        
+            <div id="mobile-menu">
+                <ul id="mobile-nav-list">
+                    <li class="nav-item">
+                        <a>Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>Contato</a>
+                    </li>
+                </ul>
+        </div>
+        </header>
+        <script src="/script/script.js"></script>
+        
+        <main id="content" class="bg-image">
+            <section id="home">
+                <div id="cta">
+                    <h1 class="title">
+                        O sabor que você
+                        <span>merece!</span>
+                    </h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iusto nemo numquam debitis, facilis temporibus officia
+                    </p>
                 </div>
-            </div>
-
-            <div id="banner">
-                <img src="/projeto-html/imagens/cscz.png" alt="imagem da home">
-            </div>
-
         </section>
 
+        <section class="mix-arretado">
+            <h1>Conheça nossa histrória</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore mollitia inventore placeat, facilis impedit ad tempore eos porro quidem illo dignissimos libero cupiditate, eligendi illum fugit iste tempora beatae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dicta aliquid quis, officia itaque ut asperiores alias neque sapiente voluptatem commodi accusamus quasi assumenda facere est nam autem explicabo fuga! Lorem, ipsum dolor sit amet consectetur adipisicing elit. A eligendi pariatur quidem? Autem sit repudiandae maxime blanditiis eveniet hic, excepturi libero eius aliquam dignissimos ab officiis asperiores illum dolorem temporibus?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia, rerum labore placeat neque veniam odio asperiores reprehenderit, voluptas debitis inventore ut, distinctio velit doloremque? Cum voluptate ducimus beatae inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque ex at laboriosam in beatae corporis et consequatur saepe quos officia aperiam ipsa, dolorum, magni quibusdam tenetur ullam quas eligendi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum minus sapiente, odio quaerat hic voluptas incidunt perferendis labore assumenda officia delectus ex eligendi tempore rerum facere laboriosam modi veniam!</p>
+        </section>
+        
         <section id="menu">
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
 
             <div id="dishes">
                 <div class="dish">
-                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+                    <img src="/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
 
                     <h3 class="dish-title">
                         Lorem Ipsum
@@ -112,7 +109,7 @@
                 </div>
 
                 <div class="dish">
-                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+                    <img src="/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
 
                     <h3 class="dish-title">
                         Lorem Ipsum
@@ -128,7 +125,7 @@
                 </div>
 
                 <div class="dish">
-                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+                    <img src="/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
 
                     <h3 class="dish-title">
                         Lorem Ipsum
@@ -144,7 +141,7 @@
                 </div>
 
                 <div class="dish">
-                    <img src="/projeto-html/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
+                    <img src="/imagens/arrumadinho_carne.jpg" class="dish-image" alt="foto_do_prato">
 
                     <h3 class="dish-title">
                         Lorem Ipsum
@@ -175,36 +172,6 @@
         </blockquote>
         <script async src="//www.instagram.com/embed.js"></script>
     </div>
-    <div class="sobre-o-ville">
-        <h1>Horário de funcionamento</h1>
-        <p>todos os dias, das 7h às 00h</p>
-        <h1><a href="#">WhatsApp</a></h1>
-        <p><a href="#">(83) 98131-9073</a></p>
-        <h1><a href="#">Instagram</a></h1>
-        <p><a href="#">@villedesplantes</a></p>
-        <h1><a href="#">Endereço</a></h1>
-        <p><a href="#">Rua Prefeito Joaquim Gonçalves de Assis, 50 • Jardim Oceania • João Pessoa, Paraíba • CEP 58037-645</a></p>
-        <p><a href="#">COMO CHEGAR?</a></p>
-    </div>
-    <div class="por-dentro">
-        <div class="quadrado">
-            <h1>Abô Botânica e Café</h1>
-            <p>Um atelier botânico para VERde perto. Um café que se mistura com o ambiente botânico.</p>
-            <p>Horários: Todos os dias das 7h30 às 22h</p>
-            <p>Instagram: abotanicacafe</p>
-            <p>WhatsApp: (83) 98107-5110</p>
-            <p>Site: https://abobotanica.com.br/</p>
-        </div>
-    </div>
-    <div class="queremos-te-ouvir">
-        <p>Gostou do Ville? Conta pra gente como podemos ser ainda melhores. <br> Tem alguma dúvida? Pergunte que a gente responde.</p>
-        <div class="seu-nome">
-            <p>seu nome</p>
-        </div>
-    </div>
-
-
-
-    <script src="/projeto-html/script/script2.js"></script>
+    <script src="/script/script2.js"></script>
 </body>
 </html>

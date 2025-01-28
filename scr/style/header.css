@@ -2,14 +2,20 @@
 @import url('https://fonts.cdnfonts.com/css/xilosa');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body {
+    margin: 0px;
+}
+
 header{
     display: flex;
-    width: 100%;
-    padding: 28px 8%;
+    width: 100vw;
+    height: 10vh;
     position: sticky;
     top: 0;
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(95, 38, 0);
     z-index: 3;
+    justify-content: center;
+    align-items: center;
 }
 
 #navbar{
@@ -30,16 +36,19 @@ header{
 .nav-item a{
     text-decoration: none;
     font-weight: 600;
-    color: yellow;
+    color: white;
 }
 
-.nav-item.active a{
-    color: blueviolet;
-    border-bottom: 3px solid orange;
+.nav-item a:hover {
+    color: #FFD34E;
+    text-decoration: underline;
+    transition: color 0.5s;
 }
 
 .logo{
-    width: 75px;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
 }
 
 #bt-mobile{
@@ -49,7 +58,7 @@ header{
     display: none;
 }
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 600px){
     
     #nav-list{
         display: none;

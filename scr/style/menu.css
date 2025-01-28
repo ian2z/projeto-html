@@ -27,7 +27,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 600px){
     #dishes{
         flex-wrap: wrap;
         justify-content: center;
