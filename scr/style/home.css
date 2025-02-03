@@ -9,7 +9,6 @@
     background-size: cover;
 }
 
-
 #cta .title{
     color: orange;
     font-size: 7rem;
@@ -17,7 +16,7 @@
 }
 
 #cta .title span{
-    color: rgb(64, 30, 30);
+    color: rgb(253, 107, 54);
     font-family: Xilosa;
 }
 
@@ -52,19 +51,24 @@
     background-color: #3B1F11;
 }
 
-@media screen and (max-width: 1170px){
+@media (max-width: 600px){
     #home{
         min-height: 100%;
         padding-top: 0px;
-    }
-
-    #banner, #banner img{
-        display: none;
     }
 
     #cta{
         width: 100%;
         text-align: center;
         align-items: center;
+    }
+
+    #cta .title{
+        font-size: 4rem;
+        font-family: Xilosa;
+    }
+
+    #cta .title span {
+        color: rgb(253, 107, 54);
     }
 }
