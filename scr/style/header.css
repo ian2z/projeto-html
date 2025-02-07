@@ -63,23 +63,18 @@ header{
         display: none;
 
     }    
+
     #bt-mobile{
         display: flex;
         border: none;
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+        color: white;
     }
 
-    #mobile-menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #bt-mobile:hover {
+        color: #FED34F;
     }
-    #mobile-nav-list{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-    }
+
 }
