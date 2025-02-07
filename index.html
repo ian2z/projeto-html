@@ -21,28 +21,16 @@
                         <a href="#">Home</a>
                     </li>
                     <li class="nav-item" data-target="#sobre">
-                        <a href="#">Mix Arretado</a>
+                        <a href="#sobre">Mix Arretado</a>
                     </li>
                     <li class="nav-item" data-target="#menu">
-                        <a href="#">Cardápio</a>
+                        <a href="#menu">Cardápio</a>
                     </li>
                     <li class="nav-item" data-target="#contato">
-                        <a href="#">Contato</a>
+                        <a href="#contato-mix">Contato</a>
                     </li>
                 </ul>
-                
-                <!--
-                <div class="social-media">
-                        <a href="#">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                -->
                     
-                
                 <button id="bt-mobile">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -65,7 +53,6 @@
                 </ul>
         </div>
         </header>
-        <script src="/script/script.js"></script>
         
         <main id="content" class="bg-image">
             <section id="home">
@@ -80,12 +67,12 @@
                 </div>
         </section>
 
-        <section class="mix-arretado">
+        <section id="sobre" class="mix-arretado">
             <h1>Conheça nossa histrória</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam corporis tempora ipsam odit atque esse in, ullam quidem assumenda voluptas quae. Suscipit earum saepe laudantium non, quam natus reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci provident neque iure, dignissimos ex in enim. Ratione iste voluptate eligendi, voluptatum quasi optio nisi, soluta quo libero necessitatibus distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quis modi voluptas reiciendis consequuntur sapiente? Eligendi ducimus tempore sed cumque veritatis quis, recusandae, quo vitae id est corporis itaque pariatur?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore mollitia inventore placeat, facilis impedit ad tempore eos porro quidem illo dignissimos libero cupiditate, eligendi illum fugit iste tempora beatae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dicta aliquid quis, officia itaque ut asperiores alias neque sapiente voluptatem commodi accusamus quasi 
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia, rerum labore placeat neque veniam odio asperiores reprehenderit, voluptas debitis inventore ut, distinctio velit doloremque? Cum voluptate ducimus beatae inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque ex at laboriosam in beatae corporis et consequatur saepe quos officia aperiam ipsa, dolorum, magni quibusdam tenetur ullam quas eligendi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum minus sapiente, odio quaerat hic voluptas incidunt perferendis labore assumenda officia delectus ex eligendi tempore rerum facere laboriosam modi veniam!</p>
+            <section class="dados-sobre">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam corporis tempora ipsam odit atque esse in, ullam quidem assumenda voluptas quae. Suscipit earum saepe laudantium non, quam natus reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci provident neque iure, dignissimos ex in enim. Ratione iste voluptate eligendi, voluptatum quasi optio nisi, soluta quo libero necessitatibus distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quis modi voluptas reiciendis consequuntur sapiente? Eligendi ducimus tempore sed cumque veritatis quis, recusandae, quo vitae id est corporis itaque pariatur?</p>
+                <img src="./imagens/ambiente.jpg" class="imagem-descricao" alt="foto da descrição">
+            </section>
         </section>
         
         <section id="menu">
@@ -154,23 +141,37 @@
                 </div>
             </div>
         </section>
-        <section class="contato">
-            <h1>Fale conosco</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum eos sed cum eum atque, possimus id amet quaerat vero illo laborum animi ex voluptatum reiciendis modi consequuntur fugit iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae excepturi, voluptatem earum laudantium minima sequi ducimus quidem voluptatibus laborum veritatis, similique facilis! Ipsum beatae fugit quaerat quae dolore. Hic, facilis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis minima deleniti unde repellat praesentium alias repellendus, dignissimos debitis iusto itaque facilis doloribus voluptate deserunt quaerat illum id molestiae suscipit hic!</p>
+
+        <section id="contato-mix" class="contato">
+
+            <div id="contatos">
+
+                <h1>Fale conosco</h1>
+            
+                <p>Ficou com água na boca? Confira no mapa ao lado a nossa localização e nos contate!</p>
+    
+                <h3 class="nossas-redes">Nossas redes sociais:</h3>
+    
+                <div class="social-media">
+                    <a href="https://youtu.be/dQw4w9WgXcQ" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+    
+                    <a href="https://youtu.be/dQw4w9WgXcQ" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+            
+            <iframe class="mapa"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.135361913827!2d-34.85584978839006!3d-7.11030779286354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd5b93f6e4d3%3A0x4a4bb4519122b763!2sMix%20Arretado!5e0!3m2!1spt-BR!2sbr!4v1738957215529!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
         </section>
     </main>
     <footer>
         <p>© Mix Arretado. Todos os direitos reservados.</p>
     </footer>
-
-        <!--
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C_RZa68pk3V/" data-instgrm-version="14" style="max-width:540px;min-width:326px;width:100%;margin:0 auto;">
-            <a href="https://www.instagram.com/p/C_RZa68pk3V/" target="_blank">Ver este post no Instagram</a>
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-    </div>
-    <script src="/script/script2.js"></script>
-        -->
-        
 </body>
 </html>

@@ -13,6 +13,8 @@
     color: orange;
     font-size: 7rem;
     font-family: Xilosa;
+    margin-bottom: 30px;
+
 }
 
 #cta .title span{
@@ -21,8 +23,9 @@
 }
 
 #cta .description{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: white;
+    max-width: 1250px;
 }
 
 #cta_buttons{
@@ -70,5 +73,9 @@
 
     #cta .title span {
         color: rgb(253, 107, 54);
+    }
+
+    #cta .description{
+        font-size: 1.2rem;
     }
 }
