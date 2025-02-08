@@ -18,7 +18,7 @@
 }
 
 #cta .title span{
-    color: rgb(253, 107, 54);
+    color: #F26938;
     font-family: Xilosa;
 }
 
@@ -38,20 +38,12 @@
     text-decoration: none;
 }
 
-#banner{
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    width: 70%;
-}
-
-#banner img{
-    height: 100%;
-    width: fit-content;
-}
-
 #menu {
     background-color: #3B1F11;
+}
+
+@media (max-width: 900px) {
+    
 }
 
 @media (max-width: 600px){

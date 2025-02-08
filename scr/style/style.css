@@ -2,8 +2,20 @@
 @import url('https://fonts.cdnfonts.com/css/xilosa');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
                 
+/* Color Theme Swatches in Hex */
+.color-1 { color: #F2C84B; }
+.color-2 { color: #F2B84B; }
+.color-3 { color: #F2994B; }
+.color-4 { color: #F26938; }
+.color-5 { color: #401801; }
+
 html {
     scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 *{
@@ -99,6 +111,7 @@ section{
 
 footer {
     background-color: black;
+    width: 100vw;
 }
 
 footer p {
@@ -107,9 +120,17 @@ footer p {
 }
 
 .mix-arretado{
-    width: 100%;
-
+    width: 100vw;
     margin: 0 auto;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.mix-arretado img {
+    min-width: 400px;
+    flex: 1;
 }
 
 .mix-arretado h1{
@@ -119,8 +140,9 @@ footer p {
 
 .dados-sobre{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    flex: 1;
     margin: 0;
     padding: 0;
 }
@@ -128,13 +150,14 @@ footer p {
 .dados-sobre p{
     flex: 1;
     margin: 0;
-    max-width: calc(50% - 10px);
+    text-align: justify;
 }
 
 .imagem-descricao{
     flex: 1;
     max-width: 40%;
-    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px){
@@ -144,18 +167,30 @@ footer p {
     .dados-sobre p{
         text-align: center;
     }
+}
 
+
+@media (max-width: 900px) {
+    #contato-mix{
+        flex-wrap: wrap;
     }
 
+    .mapa{
+        margin: auto;
+    }
+}
 
 #contato-mix{
     display: flex;
+    flex: 1;
     align-items: center;
+    justify-content: center;
     align-content: flex-end;
-    gap: 35px;
+    gap: 3rem;
 }
 
 .mapa{
-    flex: 1;
-    height: auto;
+   height: 40vh;
+   border-radius: 80px;
+   padding: 50px;
 }

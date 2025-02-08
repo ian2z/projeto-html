@@ -33,6 +33,14 @@ header{
     gap: 48px;
 }
 
+.nav-item {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
 .nav-item a{
     text-decoration: none;
     font-weight: 600;
