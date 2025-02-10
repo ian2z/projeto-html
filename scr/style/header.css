@@ -19,7 +19,6 @@ header{
 }
 
 #navbar{
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +29,7 @@ header{
     align-items: center;
     display: flex;
     list-style: none;
+    margin-left: -100px;
     gap: 48px;
 }
 
@@ -79,6 +79,7 @@ header{
         font-size: 1.5rem;
         cursor: pointer;
         color: white;
+        margin-left: -100px;
     }
 
     #bt-mobile:hover {

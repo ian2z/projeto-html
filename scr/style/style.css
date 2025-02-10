@@ -129,7 +129,6 @@ footer p {
 }
 
 .mix-arretado img {
-    min-width: 400px;
     flex: 1;
 }
 
@@ -155,9 +154,32 @@ footer p {
 
 .imagem-descricao{
     flex: 1;
-    max-width: 40%;
     border-radius: 10px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (max-width: 1200px) {
+    .mix-arretado {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagem-descricao {
+        width: 500px;
+    }
+        
+
+}
+
+@media (max-width: 900px) {
+    #contato-mix{
+        flex-wrap: wrap;
+    }
+    
+    .mapa{
+        margin: auto;
+    }
 }
 
 @media (max-width: 600px){
@@ -165,18 +187,10 @@ footer p {
         display: none;
     }
     .dados-sobre p{
-        text-align: center;
+        text-align: justify;
     }
-}
-
-
-@media (max-width: 900px) {
-    #contato-mix{
-        flex-wrap: wrap;
-    }
-
-    .mapa{
-        margin: auto;
+    .dados-sobre h1 {
+        margin: auto auto 20px auto;
     }
 }
 
