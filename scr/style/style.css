@@ -9,7 +9,6 @@ html {
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* remover rolagem lateral */
 }
 
 /* todas as tags herdam a estilação */
@@ -61,7 +60,7 @@ section{
 
 /* estilização do conheça nossa história */
 .mix-arretado{
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     gap: 5rem;
@@ -95,7 +94,7 @@ section{
 
 footer {
     background-color: black;
-    width: 100vw;
+    width: 100%;
 }
 
 footer p {
