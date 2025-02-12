@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
+    background-color: #3B1F11;
 }
 
 #dishes{
@@ -39,16 +40,16 @@
     color: orange;
 }
 
-.section-title{
-    font-family: Xilosa;
-    font-size: 5rem;
-}
-
 .dish-image{
     max-height: 200px;
     border-radius: 10px;
 }
 
+.section-title{
+    color: orange;
+    font-family: Xilosa;
+    font-size: 5rem;
+}
 
 .section-subtitle{
     font-size: 1.5rem;

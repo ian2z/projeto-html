@@ -10,22 +10,29 @@ header{
     display: flex;
     width: 100vw;
     height: 10vh;
-    position: sticky;
-    top: 0;
+    position: sticky; /* fixa o elemento em determinado limite */
+    top: 0; /* fixa no topo da página */
     background-color: #3B1F11;
-    z-index: 3;
     justify-content: center;
     align-items: center;
 }
 
-#navbar{
+/* dimensões da logo na navbar */
+header .logo img{
+    height: 110px;
+    width: 110px;
+}
+
+
+header #navbar{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 1; /* faz o conteúdo ocupar um box inteiro do flex-box */
 }
 
-#nav-list{
+/* estilização da lista de links na navbar */
+header #navbar #nav-list{
     align-items: center;
     display: flex;
     list-style: none;
@@ -33,45 +40,45 @@ header{
     gap: 48px;
 }
 
-.nav-item {
+/* estilização dos itens da lista */
+#nav-list .nav-item {
     transition: transform 0.2s ease-in-out;
 }
 
-.nav-item:hover {
-    transform: scale(1.02);
+#nav-list .nav-item:hover {
+    transform: scale(1.02); /* aumentar o tamanho */
 }
 
-.nav-item a{
+/* estilização dos links no navbar */
+#nav-list .nav-item a{
     text-decoration: none;
     font-weight: 600;
     color: white;
 }
 
-.nav-item a:hover {
+#nav-list .nav-item a:hover {
     color: #FFD34E;
     text-decoration: underline;
-    transition: color 0.5s;
+    transition: color 0.5s; /* transição de cor */
 }
 
-.logo img{
-    height: 110px;
-    width: 110px;
-}
-
+/* excluindo o botão em relsoluções acima de 600px*/
 #bt-mobile{
     display: none;
 }
+
 #mobile-menu{
     display: none;
 }
 
+/* point break do navbar para mobile */
 @media screen and (max-width: 600px){
     
     #nav-list{
-        display: none;
-
+        display: none; /* exclui os links */
     }    
 
+    /* adiciona o botão de lista */
     #bt-mobile{
         display: flex;
         border: none;
@@ -85,5 +92,4 @@ header{
     #bt-mobile:hover {
         color: #FED34F;
     }
-
 }

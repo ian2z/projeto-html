@@ -9,7 +9,7 @@
     background-size: cover;
 }
 
-#cta .title{
+#texto_home .title{
     color: orange;
     font-size: 7rem;
     font-family: Xilosa;
@@ -17,34 +17,22 @@
 
 }
 
-#cta .title span{
+#texto_home .title span{
     color: #F26938;
     font-family: Xilosa;
 }
 
-#cta .description{
+#texto_home .description{
     font-size: 1.7rem;
     color: white;
     max-width: 1250px;
     margin: auto;
 }
 
-#cta_buttons{
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-}
-
-.btn-default a {
-    text-decoration: none;
-}
-
-#menu {
-    background-color: #3B1F11;
-}
-
-@media (max-width: 900px) {
-    
+.imagem-descricao{
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px){
@@ -53,22 +41,22 @@
         padding-top: 0px;
     }
 
-    #cta{
+    #texto_home{
         width: 100%;
         text-align: center;
         align-items: center;
     }
 
-    #cta .title{
+    #texto_home .title{
         font-size: 4rem;
         font-family: Xilosa;
     }
 
-    #cta .title span {
+    #texto_home .title span {
         color: rgb(253, 107, 54);
     }
 
-    #cta .description{
+    #texto_home .description{
         font-size: 1.2rem;
     }
 }
