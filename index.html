@@ -12,10 +12,48 @@
     <link rel="stylesheet" href="./scr/style/menu.css">
 </head>
 <body>
+
+    <!--
+        <<<Resumo>>>
+        ➣ Criação da navbar com logo;
+        ➣ Adicionando foto de backgorund da #home;
+        ➣ Criação da biografia do restaurante na aba #sobre;
+        ➣ Criação do de um cardápio no #menu;
+        ➣ Criação da área de contato com redes sociais e localização no #contato;
+        ➣ Criação de um footer simples.
+
+        <<<Links>>>                    
+        ➢ Link de importação da biblioteca de ícones do Font Awesome;
+        ➢ Link de importação do ícone de logo do ifood;
+        ➢ Link de importação da fonte "xilosa", através do Google Fonts (Localizado no "style.css").
+
+        <<<Diretórios>>>                    
+        ⏍imagens
+            ↪todos as imagens e ícones utilizadas foram exportadas deste diretório
+        ⏍pages
+            ↪todos os arquivos html das futuras páginas do site
+        ⏍src
+            ↪style
+                ↪todos os arquivos de estilização que foram exportados
+        index.html
+
+        <<<Hierarquia das tags>>>
+        <header>
+            ↪navbar
+        <main> #content
+            ↪#home: criação do título e subtitulo do site
+            ↪#sobre: biografia do restaurante
+            ↪#menu: cardápio
+            ↪#contato: área de redirecionamento para redes socias
+        <footer>
+    -->
+
         <header class="bg-image">
+            <!--Logo da navbar-->
             <a href="#" class="logo"><img src="./imagens/logo3 100.png" alt="logo"></a>
         
             <nav id="navbar">
+                <!--Criação da navbar utilizando uma lista não ordenada-->
                 <ul id="nav-list">
                     <li class="nav-item active">
                         <a href="#">Home</a>
@@ -37,6 +75,7 @@
             </nav>
         
             <div id="mobile-menu">
+                <!--Criação da navbar mobile, utilizando o mesmo método da navbar web-->
                 <ul id="mobile-nav-list">
                     <li class="nav-item">
                         <a>Início</a>
@@ -55,7 +94,9 @@
         </header>
         
         <main id="content" class="bg-image">
+            <!--Imagem de fundo pelo backgorund-image (no home.css)-->
             <section id="home">
+                <!--Título e subtitulo da página inicial-->
                 <div id="cta">
                     <h1 class="title">
                         O sabor que você
@@ -68,6 +109,7 @@
         </section>
 
         <section id="sobre" class="mix-arretado">
+            <!--#sobre - Bibliografia do restaurante, um breve resumo-->
             <section class="dados-sobre">
             <h1>Conheça nossa histrória</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam corporis tempora ipsam odit atque esse in, ullam quidem assumenda voluptas quae. Suscipit earum saepe laudantium non, quam natus reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci provident neque iure, dignissimos ex in enim. Ratione iste voluptate eligendi, voluptatum quasi optio nisi, soluta quo libero necessitatibus distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quis modi voluptas reiciendis consequuntur sapiente? Eligendi ducimus tempore sed cumque veritatis quis, recusandae, quo vitae id est corporis itaque pariatur?</p>
@@ -76,11 +118,18 @@
         </section>
         
         <section id="menu">
+            <!--#menu - Criação dos blocos de informção do cardápio, nomeados com a class .dish-->
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
 
             <div id="dishes">
                 <div class="dish">
+                    <!--
+                    Cada dish vai conter as seguintes tags:
+                    <img> = Imagem de apresentação do prato
+                    <h3> = Título do prato
+                    <span> = Descrição do prato
+                    -->
                     <img src="./imagens/tapioca_joaopessoa.jpg" class="dish-image" alt="foto_do_prato">
 
                     <div class="informacoes-dish">
@@ -136,13 +185,10 @@
         </section>
 
         <section id="contato-mix" class="contato">
-
+            <!--#contato - Área reservada para os botões de redirecionamento de contato e localização do restaurante-->
             <div id="contatos">
-
                 <h1>Fale conosco</h1>
-            
                 <p>Ficou com água na boca? Confira no mapa ao lado a nossa localização e nos contate!</p>
-    
                 <h3 class="nossas-redes">Nossas redes sociais:</h3>
     
                 <div class="social-media">
@@ -157,6 +203,7 @@
 
             </div>
             
+            <!--iframe Google Maps com a localização-->
             <iframe class="mapa"
              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.135361913827!2d-34.85584978839006!3d-7.11030779286354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd5b93f6e4d3%3A0x4a4bb4519122b763!2sMix%20Arretado!5e0!3m2!1spt-BR!2sbr!4v1738957215529!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
@@ -164,6 +211,7 @@
         </section>
     </main>
     <footer>
+        <!--Footer do site-->
         <p>© Mix Arretado. Todos os direitos reservados.</p>
     </footer>
 </body>
