@@ -72,9 +72,9 @@ header #navbar #nav-list{
 }
 
 /* point break do navbar para mobile */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
     
-    #nav-list{
+    #nav-list .nav-item{
         display: none; /* exclui os links */
     }    
 
@@ -86,7 +86,6 @@ header #navbar #nav-list{
         font-size: 1.5rem;
         cursor: pointer;
         color: white;
-        margin-left: -100px;
     }
 
     #bt-mobile:hover {

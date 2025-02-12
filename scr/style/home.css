@@ -11,7 +11,7 @@
 
 #texto_home .title{
     color: orange;
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: Xilosa;
     margin-bottom: 30px;
 
@@ -35,7 +35,7 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 600px){
+@media (max-width: 900px){
     #home{
         min-height: 100%;
         padding-top: 0px;
@@ -57,6 +57,6 @@
     }
 
     #texto_home .description{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
