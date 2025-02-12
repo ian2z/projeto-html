@@ -76,7 +76,8 @@ header #navbar #nav-list{
     
     #nav-list .nav-item{
         display: none; /* exclui os links */
-    }    
+    }
+
 
     /* adiciona o botão de lista */
     #bt-mobile{

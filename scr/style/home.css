@@ -1,15 +1,15 @@
-#home{
-    display: flex;
+#home{ /* cria um layout full screen para a home */
+    display: flex; /* Define o layout como flexbox */
     height: 90vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(../../imagens/pure2.jpg);
-    background-size: cover;
+    background-image: url(../../imagens/pure2.jpg);/* Define a imagem de fundo */
+    background-size: cover;/* Faz com que a imagem de fundo cubra completamente a área disponível */
 }
 
-#texto_home .title{
+#texto_home .title{ /* estilização do texto */
     color: orange;
     font-size: 6rem;
     font-family: Xilosa;
@@ -17,25 +17,25 @@
 
 }
 
-#texto_home .title span{
+#texto_home .title span{/* estilização do span */
     color: #F26938;
     font-family: Xilosa;
 }
 
-#texto_home .description{
+#texto_home .description{ /*descrição rápida do restaurante */
     font-size: 1.7rem;
     color: white;
     max-width: 1250px;
     margin: auto;
 }
 
-.imagem-descricao{
+.imagem-descricao{/*imagem do conheça nossa história */
     flex: 1;
     border-radius: 10px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px){ /*configurações de responsividade*/
     #home{
         min-height: 100%;
         padding-top: 0px;
