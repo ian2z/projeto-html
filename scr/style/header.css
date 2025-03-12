@@ -72,6 +72,10 @@ header #navbar #nav-list{
     display: none;
 }
 
+#mobile-menu.hidden{
+    display: block;
+}
+
 /* point break do navbar para mobile */
 @media screen and (max-width: 900px){
     
