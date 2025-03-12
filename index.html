@@ -52,18 +52,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector("button");
+    const menuButton = document.querySelector("button[aria-controls='mobile-menu']");
     const mobileMenu = document.getElementById("mobile-menu");
-
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
-            let isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-            menuButton.setAttribute("aria-expanded", !isExpanded);
-        });
-    } else {
-        console.error("Botão ou menu móvel não encontrados!");
-    }
+    
+    menuButton.addEventListener("click", function () {
+        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+    });
 });
     </script>
     
@@ -156,13 +152,46 @@
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
 
             <div id="dishes">
-                <div class="dish">
-                    <!--
-                    Cada dish vai conter as seguintes tags:
-                    <img> = Imagem de apresentação do prato
-                    <h3> = Título do prato
-                    <span> = Descrição do prato
-                    -->
+
+                <div class="container mx-auto p-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a>
+            
+                    </div>
+                  </div>
+
+
+                <!-- <div class="dish">
                     <img src="./imagens/tapioca_joaopessoaOK.jpg" class="dish-image" alt="foto_do_prato">
 
                     <div class="informacoes-dish">
@@ -213,8 +242,10 @@
                         </span>
                     </div>
                 </div>
-            </div>
-            <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a>
+            </div> -->
+            
+            <!-- <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a> -->
+
         </section>
 
         <section id="contato-mix" class="contato">
@@ -228,21 +259,21 @@
     <div class="grid md:grid-cols-2 md:gap-6 my-5">
         <div class="relative z-0 w-full mb-5 group">
             <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Telefone</label>
+            <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Telefone</label>
         </div>
         <div class="relative z-0 w-full mb-5 group">
             <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">E-mail</label>
+            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">E-mail</label>
         </div>
       </div>
     <div class="grid md:grid-cols-2 md:gap-6">
       <div class="relative z-0 w-full mb-5 group">
           <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-          <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Primeiro Nome</label>
+          <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Primeiro Nome</label>
       </div>
       <div class="relative z-0 w-full mb-5 group">
           <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Último Nome</label>
+          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Último Nome</label>
       </div>
     </div>
 </form>
