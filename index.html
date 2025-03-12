@@ -50,49 +50,76 @@
         <footer>
     -->
 
-        <header class="bg-image">
-            <!--Logo da navbar-->
-            <a href="#" class="logo"><img src="./imagens/logo3 100.png" alt="logo"></a>
-        
-            <nav id="navbar">
-                <!--Criação da navbar utilizando uma lista não ordenada-->
-                <ul id="nav-list">
-                    <li class="nav-item active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sobre">Mix Arretado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#menu">Cardápio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contato-mix">Contato</a>
-                    </li>
-                </ul>
-                    
-                <button id="bt-mobile">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </nav>
-        
-            <div id="mobile-menu">
-                <!--Criação da navbar mobile, utilizando o mesmo método da navbar web-->
-                <ul id="mobile-nav-list">
-                    <li class="nav-item">
-                        <a>Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a>Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a>Cardápio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a>Contato</a>
-                    </li>
-                </ul>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("button[aria-controls='mobile-menu']");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    menuButton.addEventListener("click", function () {
+        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+    });
+});
+    </script>
+    
+    <nav class="bg-[#3B1F11] fixed top-0 left-0 z-10 w-full">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-[10vh] items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#eaeae3] hover:text-[#393938] focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:justify-center">
+              <div class="flex shrink-0 items-center">
+                <a href="#"><img class="h-[130px] w-full" src="imagens/logo3 100.png" alt="Mix Arretado"></a>
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Home</a>
+                  <a href="#sobre" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Mix Arretado</a>
+                  <a href="#menu" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-150 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Cardápio</a>
+                  <a href="#contato-mix" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Contato</a>
+                </div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
         </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#sobre-nos" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Sobre nós</a>
+            <a href="#serviços" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Nossos serviços</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Galeria</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Agendamento</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Contato</a>
+          </div>
+        </div>
+      </nav>
         </header>
         
         <main id="content" class="bg-image">
