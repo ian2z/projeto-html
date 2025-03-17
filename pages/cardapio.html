@@ -1,154 +1,1152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardapio teste</title>
+    <title>Mix Arretado | Cardápio</title>
     <link href="https://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#3B1F11]">
-
+<body class="bg-[#3B1F11]"> 
+    
     <h1 class="p-4 font-[xilosa] font-medium text-center text-[#ffa500] text-7xl">Conheça nosso Cardápio</h1>
 
     <h3 class="p-8 text-white text-center text-2xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus architecto, eos nesciunt dicta vitae officia reprehenderit facere saepe aspernatur in</h3>
+    
+    <!-- Filtros de Categoria -->
+    <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Cuscuz</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Tapiocas Arretadas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Tapioquinhas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Jantar</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Sanduíches</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Pastéis</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Sobremesas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Bebidas</button>
+    </div>
 
-      <div class="container mx-auto p-4">
+    <!-- Cardápio -->
+    <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          
+          <!-- Item de Cardápio (Cuscuz) -->
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Alagoas</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
                 <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
               </div>
             </div>
           </div>
           
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Goiás</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Rio Grande do Sul</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Roraima</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu.</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Bahia</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Mato Grosso</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cuscuz Paraíba</h2>
+              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher o buxo de mininin.</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Ceará</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Rio Grande do Norte</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Acre</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Maranhão</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
                 <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Item de Cardápio (Tapiocas Arretadas) -->
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Areia</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Bananeiras</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Beijú simples</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Soledade</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cabedelo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Campina Grande</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Solânea</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Guarabira</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">João Pessoa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pombal</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Monteiro</h2>
+              <p class="text-center text-gray-500 mt-2">Uma tapioca deliciosa com um recheio de queijo coalho e carne de sol desfiada.</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cajazeiras</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Beijú ARRETADO</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">São Mamede</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapiocas arretadas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Piancó</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Tapioquinhas -->
+
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Bananeiras</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cabedelo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pombal</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">João Pessoa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Campina Grande</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cabaceiras</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cajazeiras</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Beijú ARRETADO</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">São Mamede</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Uirauna</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Piancó</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="tapioquinhas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Texeira</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Jantar -->
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Rubacão</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Galinha guizada</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Picado de bode</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Charque</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Carne de sol na Nata</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Carne de sol Acebolada</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Bode guizado</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Frango desfiado</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Calabresa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Carne de sol na Nata</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Carne de sol</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Charque</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Purê Picado</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pamonha na chapa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Quijo Coalho na chapa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Queijo na chapa com melaço</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="jantar" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pamonha na chapa com queijo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Sanduíches -->
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pão na chapa</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pão com ovo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pão com queijo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pão Misto</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Americano</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Pão com frango desfiado e queijo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">BODE REI</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">MORANGUINHO DO NORDESTE</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">BOI QUENTE</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">GALINHA INXIRIDA</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sanduíches" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">MIX ARRETADO</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Pastéis -->
+
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Queijo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Misto</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Carne moída</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Frango</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Frango com Catupiry</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Lombinho com Cream Chese</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Carne de sol</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Ouro Branco</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Diamante Negro</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Diamante Laka</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="pastéis" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Laka Oreo</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Sobremesas -->
+
+          <div data-category="sobremesas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Brigadeiro de colher</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sobremesas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cartola tradicional</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sobremesas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cartola especial</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sobremesas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cartolinha tradicional</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="sobremesas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Cartolinha especial</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          <!-- Bebidas -->
+
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Sucos diversos</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
-
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Café P</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
-
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Café G</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
-
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Café com leite P</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
-
-          <div class="bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nome do Prato</h2>
-              <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Café com leite G</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
               </div>
             </div>
           </div>
-
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Nescau Gelado</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Capuccino</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Água mineral</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Água com gás</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Coca Cola KS</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Refri lata</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Refri litro</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Vitamina de Açai</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Vitamina de Banana</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
+          
+          <div data-category="bebidas" class="menu-item bg-white shadow-lg rounded-2xl p-4">
+            <img src="../imagens/cuscuz_paraiba.jpg" alt="Tapioca Arretada" class="w-full h-48 object-cover rounded-xl">
+            <div class="mt-4">
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Long Neck</h2>
+              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <div class="mt-3 flex justify-center items-center">
+                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 18,90</span>
+              </div>
+            </div>
+          </div>
 
         </div>
-      </div>
+    </div>
+
+    <script>
+      // Obtendo os botões de categoria
+      const buttons = document.querySelectorAll('.category-btn');
+      
+      // Obtendo todos os pratos do cardápio
+      const menuItems = document.querySelectorAll('.menu-item');
+      
+      // Função de filtro
+      function filterMenu(category) {
+        // Se a categoria for 'all', exibe todos os pratos
+        if (category === 'all') {
+          menuItems.forEach(item => {
+            item.style.display = 'block';
+          });
+        } else {
+          // Exibe apenas os pratos da categoria selecionada
+          menuItems.forEach(item => {
+            if (item.getAttribute('data-category') === category) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+      }
+      
+      // Atribuindo evento de clique a cada botão de categoria
+      buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          const category = event.target.innerText.toLowerCase(); // Obtém o nome da categoria a partir do texto do botão
+          filterMenu(category); // Filtra o cardápio com base na categoria
+        });
+      });
+    </script>
+
 </body>
 </html>
