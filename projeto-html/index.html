@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Arretado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./scr/style/header.css">
+    <link rel="stylesheet" href="./scr/style/style.css">
+    <link rel="stylesheet" href="./scr/style/home.css">
+    <link rel="stylesheet" href="./scr/style/menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--
+        -Resumo-
+        ➣ Criação da navbar com logo;
+        ➣ Adicionando foto de backgorund da #home;
+        ➣ Criação da biografia do restaurante na aba #sobre;
+        ➣ Criação do de um cardápio no #menu;
+        ➣ Criação da área de contato com redes sociais e localização no #contato;
+        ➣ Criação de um footer simples.
+
+        -Links-                   
+        ➢ Link de importação da biblioteca de ícones do Font Awesome;
+        ➢ Link de importação do ícone de logo do ifood;
+        ➢ Link de importação da fonte "xilosa", através do Google Fonts (Localizado no "style.css").
+
+        -Diretórios-                   
+        ⏍imagens
+            ↪todos as imagens e ícones utilizadas foram exportadas deste diretório
+        ⏍pages
+            ↪todos os arquivos html das futuras páginas do site
+        ⏍src
+            ↪style
+                ↪todos os arquivos de estilização que foram exportados
+        index.html
+
+        -Hierarquia das tags-
+        <header>
+            ↪navbar
+        <main> #content
+            ↪#home: criação do título e subtitulo do site
+            ↪#sobre: biografia do restaurante
+            ↪#menu: cardápio
+            ↪#contato: área de redirecionamento para redes socias
+        <footer>
+    -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("button[aria-controls='mobile-menu']");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    menuButton.addEventListener("click", function () {
+        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+    });
+});
+    </script>
+    
+    <nav class="bg-[#3B1F11] fixed top-0 left-0 z-10 w-full">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-[10vh] items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#eaeae3] hover:text-[#393938] focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:justify-center">
+              <div class="flex shrink-0 items-center">
+                <a href="#"><img class="h-[130px] w-full" src="imagens/logo3 100.png" alt="Mix Arretado"></a>
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Home</a>
+                  <a href="#sobre" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Mix Arretado</a>
+                  <a href="#menu" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-150 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Cardápio</a>
+                  <a href="#contato-mix" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Contato</a>
+                </div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Home</a>
+            <a href="#sobre" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Mix Arretado</a>
+            <a href="#menu" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Cardápio</a>
+            <a href="#contato-mix" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Contato</a>
+          </div>
+        </div>
+      </nav>
+        </header>
+        
+        <main id="content" class="bg-image">
+            <!--Imagem de fundo pelo backgorund-image (no home.css)-->
+            <section id="home">
+                <!--Título e subtitulo da página inicial-->
+                <div id="texto_home">
+                    <h1 class="title">
+                        Comida que abraça a alma e<br>
+                        <span>enche o bucho!</span>
+                    </h1>
+                    <p class="description">
+                        Restaurante de comida regional que tem um tempero de voinha e te faz reviver lembranças inesquecíveis
+                    </p>
+                </div>
+            </section>
+
+        <section id="sobre" class="mix-arretado">
+            <!--#sobre - Bibliografia do restaurante, um breve resumo-->
+            <section class="dados-sobre">
+            <h1>Conheça nossa história</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam corporis tempora ipsam odit atque esse in, ullam quidem assumenda voluptas quae. Suscipit earum saepe laudantium non, quam natus reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci provident neque iure, dignissimos ex in enim. Ratione iste voluptate eligendi, voluptatum quasi optio nisi, soluta quo libero necessitatibus distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quis modi voluptas reiciendis consequuntur sapiente? Eligendi ducimus tempore sed cumque veritatis quis, recusandae, quo vitae id est corporis itaque pariatur?</p>
+
+              <div class="botao-sobre">
+                <a href="./pages/mixarretao.html">
+                  <button class="button-menu px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+                      saiba mais
+                  </button>
+              </a>
+              </div>
+            </section>
+                <img src="./imagens/ambiente.jpg" class="imagem-descricao" alt="foto da descrição">
+        </section>
+        
+        <section id="menu">
+            <!--#menu - Criação dos blocos de informção do cardápio, nomeados com a class .dish-->
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+            <div id="dishes">
+
+                <div class="container mx-auto p-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="bg-white shadow-lg rounded-2xl p-4">
+                        <img src="../imagens/cuscuz_paraiba.jpg" alt="Nome do Prato" class="w-full h-48 object-cover rounded-xl">
+                        <div class="mt-4">
+                          <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#ffa500]">Nome do Prato</h2>
+                          <p class="text-center text-gray-500 mt-2">O Cuscuz Paraíba vem com uma porção recheada de nossa carne de sol na nata pra encher buxo de mininin</p>
+                          <div class="mt-3 flex justify-center items-center">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a> -->
+
+
+                  </div>
+                </div>
+              </div>
+            
+              <!-- <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a> -->
+              <div class="flex justify-center mt-6">
+                <a href="./pages/cardapio.html">
+                    <button class="button-menu px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+                        Ver mais
+                    </button>
+                </a>
+
+        </section>
+
+        <section id="contato-mix" class="contato">
+            <!--#contato - Área reservada para os botões de redirecionamento de contato e localização do restaurante-->
+            <div id="contatos">
+                <h1>Fale com a gente</h1>
+                <p>Ficou com água na boca? Faz a tua avaliação mininu!</p>
+                
+
+<form class="max-w-md mx-auto my-5">
+    <div class="grid md:grid-cols-2 md:gap-6 my-5">
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Telefone</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">E-mail</label>
+        </div>
+      </div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Primeiro Nome</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Último Nome</label>
+      </div>
+    </div>
+</form>
+<form class="max-w-sm mx-auto">
+    <label for="message" class="block mb-2 text-sm font-ligth text-gray-900 dark:text-gray">Sua mensagem</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escreva seu comentário..."></textarea>
+    
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+  </form>
+  
+  
+    
+    
+  
+                <h3 class="nossas-redes">Nossas redes sociais:</h3>
+    
+                <div class="social-media">
+                    <a href="https://www.instagram.com/mixarretadojp/" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+    
+                    <a href="https://api.whatsapp.com/send?phone=5583988763045" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.ifood.com.br/delivery/joao-pessoa-pb/mix-arretado-estados/478e9723-415f-40a9-b411-cdf5f9f02cac" class="footer-link" id="whatsapp"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998c0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998c0-2.29-2.175-3.293-4.244-3.293m11.328 0c-4.65 0-7.184 4.149-7.184 6.998c0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293m-5.584 12.85l2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.91 8.91 0 0 1 .23 14.541H0a9.6 9.6 0 0 0 8.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007l1.08 2.988l1.555-7.623l-7.234-.02Z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!--iframe Google Maps com a localização-->
+            <iframe class="mapa"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.135361913827!2d-34.85584978839006!3d-7.11030779286354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd5b93f6e4d3%3A0x4a4bb4519122b763!2sMix%20Arretado!5e0!3m2!1spt-BR!2sbr!4v1738957215529!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+    <footer>
+        <!--Footer do site-->
+        <p>© Mix Arretado. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

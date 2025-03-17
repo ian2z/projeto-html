@@ -1,0 +1,72 @@
+#home{ /* cria um layout full screen para a home */
+    display: flex; /* Define o layout como flexbox */
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../../imagens/pure_OK.jpg);/* Define a imagem de fundo */
+    background-size: cover;/* Faz com que a imagem de fundo cubra completamente a área disponível */
+}
+
+#texto_home .title{ /* estilização do texto */
+    color: orange;
+    font-size: 6rem;
+    font-family: Xilosa;
+    margin-bottom: 30px;
+
+}
+
+#texto_home .title span{/* estilização do span */
+    color: #F26938;
+    font-family: Xilosa;
+}
+
+#texto_home .description{ /*descrição rápida do restaurante */
+    font-size: 1.5rem;
+    color: white;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.imagem-descricao{/*imagem do conheça nossa história */
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px){ /*configurações de responsividade*/
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #texto_home{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    #texto_home .title{
+        font-size: 4rem;
+        font-family: Xilosa;
+    }
+
+    #texto_home .title span {
+        color: rgb(253, 107, 54);
+    }
+
+    #texto_home .description{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #texto_home .title {
+        font-size: 3rem;
+    }
+
+    #texto_home .description {
+        font-size: 1rem;
+    }
+}
