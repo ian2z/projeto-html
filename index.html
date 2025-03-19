@@ -142,13 +142,28 @@
             <h1>Conheça nossa história</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam corporis tempora ipsam odit atque esse in, ullam quidem assumenda voluptas quae. Suscipit earum saepe laudantium non, quam natus reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci provident neque iure, dignissimos ex in enim. Ratione iste voluptate eligendi, voluptatum quasi optio nisi, soluta quo libero necessitatibus distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quis modi voluptas reiciendis consequuntur sapiente? Eligendi ducimus tempore sed cumque veritatis quis, recusandae, quo vitae id est corporis itaque pariatur?</p>
 
-              <div class="botao-sobre">
-                <a href="./pages/mixarretao.html">
-                  <button class="button-menu mt-4 px-6 py-3 bg-[#ffa500] text-white rounded- shadow-md hover:bg-[#ff8c00] transition">
-                      Saiba mais
-                  </button>
-              </a>
-              </div>
+                <div class="botao-sobre">
+                  <a href="./pages/mixarretao.html" id="saibaMaisLink">
+                    <button id="saibaMaisButton" class="button-menu mt-4 px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+                      <span id="saibaMaisText">saiba mais</span>
+                      <svg id="saibaMaisSpinner" class="hidden inline mr-3 size-5 animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+                        <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+                
+                <script>
+                  document.getElementById('saibaMaisLink').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    document.getElementById('saibaMaisSpinner').classList.remove('hidden');
+                    document.getElementById('saibaMaisText').textContent = 'Carregando...';
+                    setTimeout(function() {
+                      window.location.href = './pages/mixarretao.html';
+                    }, 500);
+                  });
+                </script>
             </section>
                 <img src="./imagens/ambiente.jpg" class="imagem-descricao" alt="foto da descrição">
         </section>
@@ -212,12 +227,27 @@
             
               <!-- <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a> -->
               <div class="flex justify-center mt-6">
-                <a href="./pages/cardapio.html">
-                    <button class="button-menu px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
-                        Ver mais
-                    </button>
+                <a href="./pages/cardapio.html" id="verMaisLink">
+                  <button id="verMaisButton" class="button-menu px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+                    <span id="verMaisText">Ver mais</span>
+                    <svg id="verMaisSpinner" class="hidden inline mr-3 size-5 animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+                      <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"/>
+                    </svg>
+                  </button>
                 </a>
-
+              </div>
+              
+              <script>
+                document.getElementById('verMaisLink').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  document.getElementById('verMaisSpinner').classList.remove('hidden');
+                  document.getElementById('verMaisText').textContent = 'Carregando...';
+                  setTimeout(function() {
+                    window.location.href = './pages/cardapio.html';
+                  }, 500);
+                });
+              </script>
         </section>
 
         <section id="contato-mix" class="contato">
@@ -253,7 +283,20 @@
     <label for="message" class="block mb-2 text-sm font-ligth text-gray-900 dark:text-gray">Sua mensagem</label>
     <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escreva seu comentário..."></textarea>
     
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+    <button type="submit" id="submitButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <span id="submitText">Enviar</span>
+      <svg id="submitSpinner" class="hidden inline mr-3 size-5 animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+        <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"/>
+      </svg>
+    </button>
+    
+    <script>
+      document.getElementById('submitButton').addEventListener('click', function() {
+        document.getElementById('submitSpinner').classList.remove('hidden');
+        document.getElementById('submitText').textContent = 'Processando...';
+      });
+    </script>
   </form>
   
   
