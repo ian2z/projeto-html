@@ -7,22 +7,93 @@
     <link href="https://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#3B1F11]"> 
+<body class="bg-[#F0F8FF]"> 
     
-    <h1 class="p-4 font-[xilosa] font-medium text-center text-[#ffa500] text-7xl">Conheça nosso Cardápio</h1>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+const menuButton = document.querySelector("button[aria-controls='mobile-menu']");
+const mobileMenu = document.getElementById("mobile-menu");
 
-    <h3 class="p-8 text-white text-center text-2xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus architecto, eos nesciunt dicta vitae officia reprehenderit facere saepe aspernatur in</h3>
+menuButton.addEventListener("click", function () {
+    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.classList.toggle("hidden");
+});
+});
+</script>
+
+<nav class="bg-[#3B1F11] fixed top-0 left-0 z-10 w-full">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-[10vh] items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#eaeae3] hover:text-[#393938] focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:justify-center">
+          <div class="flex shrink-0 items-center">
+            <a href="#"><img class="h-[90px] w-[90px]" src="../imagens/logo3 100.png" alt="Mix Arretado"></a>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="../index.html" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Home</a>
+              <a href="./mixarretao.html" class="rounded-md px-3 py-2 text-base self-center text-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Mix Arretado</a>
+              <a href="#" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-150 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Cardápio</a>
+              <a href="../#contato-mix" class="rounded-md px-3 py-2 text-base self-center font-medium text-gray-300 transition delay-100 duration-150 ease-in hover:scale-105 hover:underline hover:text-[orange]">Contato</a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="../index.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Home</a>
+        <a href="./mixarretao.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Mix Arretado</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Cardápio</a>
+        <a href="../#contato-mix" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[#eaeae3] hover:text-[#393938]">Contato</a>
+      </div>
+    </div>
+  </nav>
+  
+    <h1 class="p-4 font-[xilosa] mt-[100px] font-medium text-center text-[#3B1F11] text-7xl">Conheça nosso Cardápio</h1>
     
+    <div class="text-center md:hidden">
+      <button id="menu-toggle" class="bg-[#FFA500] text-black-500 px-5 py-2 rounded-full">☰ Filtrar</button>
+  </div>
     <!-- Filtros de Categoria -->
-    <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Cuscuz</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Tapiocas Arretadas</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Tapioquinhas</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Jantar</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Sanduíches</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Pastéis</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Sobremesas</button>
-        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-[white]">Bebidas</button>
+    <div id="category-menu" class="hidden md:flex text-center items-center justify-center py-4 md:py-8 flex-wrap">
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[#FFA500] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Cuscuz</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Tapiocas Arretadas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Tapioquinhas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Jantar</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Sanduíches</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Pastéis</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Sobremesas</button>
+        <button type="button" class="category-btn text-gray-900 border border-white hover:border-[white] hover:bg-[#FB923C] dark:border-[white] dark:bg-[orange] dark:hover:border-[white] bg-white focus:ring-4 focus:outline-none focus:ring-[white] rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-black dark:focus:ring-[#FB923C] dark:focus:bg-[#FB923C]">Bebidas</button>
     </div>
 
     <!-- Cardápio -->
@@ -30,19 +101,19 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           
           <!-- Item de Cardápio (Cuscuz) -->
-          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+          <div data-category="cuscuz" class="menu-item bg-[#3B1F11] shadow-lg rounded-2xl p-4 transition delay-100 duration-150 ease-in hover:scale-105">
+            <img src="../imagens/cuscuz_paraibaOK.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
-              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Alagoas</h2>
-              <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
+              <h2 class="font-[xilosa] text-center text-3xl font-semibold text-[#FFA500]">Alagoas</h2>
+              <p class="text-center text-white mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
               <div class="mt-3 flex justify-center items-center">
-                <span class="font-[xilosa] text-2xl font-bold text-orange-400">R$ 25,90</span>
+                <span class="font-[xilosa] text-2xl font-bold text-[#FFA500]">R$ 25,90</span>
               </div>
             </div>
           </div>
           
-          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4">
-            <img src="../imagens/cuscuz_paraiba.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
+          <div data-category="cuscuz" class="menu-item bg-white shadow-lg rounded-2xl p-4 transition delay-100 duration-150 ease-in hover:scale-105">
+            <img src="../imagens/cuscuz_paraibaOK.jpg" alt="Cuscuz Paraíba" class="w-full h-48 object-cover rounded-xl">
             <div class="mt-4">
               <h2 class="font-[xilosa] text-center text-3xl font-semibold text-orange-400">Goiás</h2>
               <p class="text-center text-gray-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut, possimus, tempora consectetur sequi exceptu</p>
@@ -1147,6 +1218,13 @@
         });
       });
     </script>
+
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function() {
+      const menu = document.getElementById("category-menu");
+      menu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
