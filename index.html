@@ -49,6 +49,18 @@
             ↪#contato: área de redirecionamento para redes socias
         <footer>
     -->
+<!-- condicional do botão-->
+<script>
+  // Reinicia o estado do spinner ao carregar a página
+  document.addEventListener('DOMContentLoaded', function() {
+    const spinners = document.querySelectorAll('.animate-spin');
+    spinners.forEach(spinner => {
+      spinner.classList.add('hidden'); // Oculta o spinner
+      spinner.classList.remove('animate-spin'); // Remove a animação
+    });
+  });
+</script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -226,9 +238,9 @@
               </div>
             
               <!-- <a href="./pages/cardapio.html"><button class="button-menu">Ver mais</button></a> -->
-              <div class="mt-6">
+              <div class="flex justify-center mt-6">
                 <a href="./pages/cardapio.html" id="verMaisLink">
-                  <button id="verMaisButton" class="button-menu flex justify-center items-center px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+                  <button id="verMaisButton" class="button-menu px-6 py-3 bg-[#ffa500] text-white rounded-xl shadow-md hover:bg-[#ff8c00] transition">
                     <span id="verMaisText">Ver mais</span>
                     <svg id="verMaisSpinner" class="hidden inline mr-3 size-5 animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
@@ -241,13 +253,17 @@
               <script>
                 document.getElementById('verMaisLink').addEventListener('click', function(event) {
                   event.preventDefault();
+                  // Exibe o spinner e altera o texto para "Carregando..."
                   document.getElementById('verMaisSpinner').classList.remove('hidden');
                   document.getElementById('verMaisText').textContent = 'Carregando...';
+              
+                  // Atraso para garantir que o spinner seja visível antes do redirecionamento
                   setTimeout(function() {
                     window.location.href = './pages/cardapio.html';
                   }, 500);
                 });
               </script>
+              
         </section>
 
         <section id="contato-mix" class="contato">
