@@ -63,7 +63,8 @@
 }
 
 .button-menu {/*configuração dos botões do menu */
-    width: 30vw;
+    min-width: 150px; /* Garante um tamanho mínimo para não encolher muito */
+    max-width: 90%;
     font-weight: 600;
     font-size: 1.2rem;
     padding: 0.5rem;
@@ -74,6 +75,7 @@
     transition: transform 0.3s ease-in-out;
     margin: auto;
 }
+
 
 .button-menu:hover {
     cursor: pointer;
